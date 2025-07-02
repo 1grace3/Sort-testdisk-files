@@ -1,16 +1,62 @@
-This code is for sorting through folders with lots of subfolders and files after using data recovery tools, such as TestDisk.
-Modify it however you want, I use it to delete every file that's not a media file, making it easier to sort through to find old photos/videos. 
 
-### delete_folders.py:
-This code sorts through the main folder and deletes all the subfolders that don't contain media files. (typically scripts and stuff from the OS) <br>
-I recommend running this first to save time.
+# 🧼 Smart Folder Cleaner (Extension Based)
 
-### delete_non_media_files.py:
-This code goes through all the subfolders and separately deletes all files that are not media files. <br>
-(useful when the folder contains both non-media and media.)
+This script **deletes files and folders** that don’t match the extensions you specify. Good for sorting folders after using recovery tools like Testdisk, sorting backups, or dumps.
 
-### To use:
-Edit each file in a code editor to add the main folder path to the **base_directory** variable. <br>
-ex) base_directory = r'C:\Users\yourname\RecoveredFiles'
+---
 
-Run each file separately.
+## 📦 Requirements
+
+- Python 3.6+
+- tqdm (`pip install tqdm`)
+
+---
+
+## How to Use
+
+### 1. Install Requirements
+
+Download and install Python from [https://www.python.org/downloads/](https://www.python.org/downloads/)  
+Make sure to check **"Add Python to PATH"** during installation.
+
+Install tqdm by Open Command Prompt and run:
+```bash
+pip install tqdm
+```
+
+### 2. Run the script
+
+It's recommended to first do a dry run: (default)
+```bash
+python clean.py -p "C:\Path\To\Folder" --keep .jpg .png .mp4
+```
+To actually delete files and folders add run argument:
+```bash
+python clean.py -p "C:\Path\To\Folder" --run --keep .jpg .png .mp4
+```
+
+### ✅ You're Done
+
+- Once finished it will generate a cleanup.log file in the same directory as the script
+- Running multiple times will append to the log file.
+
+
+## 📎Notes
+- You can use any extension with --keep, not just media.
+For example, to keep only .doc files:
+```bash
+python clean.py -p "D:\Docs" --run --keep .doc
+```
+- Extensions must include the dot (e.g., .jpg, not jpg).
+
+- Files with no extension are treated as deletable.
+
+- If you see an error like:
+```bash
+ModuleNotFoundError: No module named 'tqdm'
+```
+Just run `pip install tqdm` and re-run the command
+
+- Specifying your path with **-p** is **required**
+
+- Specifying the extension names you would like to keep with **--keep** is **required**
