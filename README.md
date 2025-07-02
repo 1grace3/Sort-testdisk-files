@@ -9,5 +9,7 @@ I recommend running this first to save time.
 This code goes through all the subfolders and separately deletes all files that are not media files. (useful when the folder contains both non-media and media.)
 
 ### To use:
-Edit the code by adding the main folder path you want to modify below.
+Edit each file in a code editor to add the main folder path to the **base_directory** variable. 
+ex) base_directory = r'C:\Users\yourname\RecoveredFiles'
+
 Run each file separately.
