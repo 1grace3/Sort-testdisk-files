@@ -6,7 +6,8 @@ This code sorts through the main folder and deletes all the subfolders that don'
 I recommend running this first to save time.
 
 ### delete_non_media_files.py:
-This code goes through all the subfolders and separately deletes all files that are not media files. (useful when the folder contains both non-media and media.)
+This code goes through all the subfolders and separately deletes all files that are not media files. <br>
+(useful when the folder contains both non-media and media.)
 
 ### To use:
 Edit each file in a code editor to add the main folder path to the **base_directory** variable. <br>
