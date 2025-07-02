@@ -2,7 +2,7 @@ This code is for sorting through folders with lots of subfolders and files after
 Modify it however you want, I use it to delete every file that's not a media file, making it easier to sort through to find old photos/videos. 
 
 ### delete_folders.py:
-This code sorts through the main folder and deletes all the subfolders that don't contain media files. (typically scripts and stuff from the OS)
+This code sorts through the main folder and deletes all the subfolders that don't contain media files. (typically scripts and stuff from the OS) <br>
 I recommend running this first to save time.
 
 ### delete_non_media_files.py:
